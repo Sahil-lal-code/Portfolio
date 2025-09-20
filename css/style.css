@@ -187,14 +187,14 @@ body {
 .hero-welcome {
     font-size: 2.5rem;
     color: var(--neon-cyan);
-    margin-bottom: 20px; /* Reduced margin to bring image closer */
+    margin-bottom: 20px; 
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 500;
     opacity: 1;
     animation: fadeUp 1s ease 0.5s forwards;
     position: relative;
-    top: -10px; /* Added to shift welcome text upward */
+    top: -10px; 
 }
 
 .profile-image-container {
@@ -490,7 +490,6 @@ body {
 }
 
 /* About Section */
-/* About Section - Centered Content */
 .about-content {
     display: flex;
     justify-content: center;
@@ -607,7 +606,6 @@ body {
     margin-left: 12px;
 }
 
-/* Remove the visual element styles since we're not using the image */
 .about-visual {
     display: none;
 }
@@ -661,17 +659,17 @@ body {
         font-size: 1rem;
     }
 }
-/* Skills Section - Make neurons visible */
+/* Skills Section */
 #skills {
     position: relative;
-    z-index: 2; /* Ensure content appears above canvas */
+    z-index: 2; 
 }
 
 .skills-container {
-    background: transparent; /* Remove the background */
+    background: transparent;
     border-radius: 20px;
     padding: 40px;
-    backdrop-filter: blur(2px); /* Very light blur to keep neurons visible */
+    backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
 }
@@ -684,7 +682,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2); /* Very light overlay */
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     z-index: -1;
 }
@@ -694,7 +692,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     position: relative;
-    z-index: 1; /* Ensure content appears above overlay */
+    z-index: 1;
 }
 
 .skill-category {
@@ -707,7 +705,7 @@ body {
     color: var(--neon-cyan);
     position: relative;
     padding-bottom: 10px;
-    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5); /* Add glow for better visibility */
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
 }
 
 .skill-category h3::after {
@@ -731,7 +729,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 15px 10px;
-    background: rgba(0, 0, 0, 0.4); /* Darker background for contrast */
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -747,7 +745,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(187, 134, 252, 0.1), transparent);
     transition: all 0.6s ease;
 }
 
@@ -756,16 +754,19 @@ body {
 }
 
 .tech-item:hover {
-    border-color: var(--neon-cyan);
+    border-color: var(--soft-purple);
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 247, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(187, 134, 252, 0.3);
 }
 
 .tech-icon {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: var(--neon-cyan);
-    text-shadow: 0 0 8px rgba(0, 247, 255, 0.5); /* Add glow effect */
+    background: linear-gradient(45deg, var(--neon-cyan), var(--soft-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
 }
 
 .tech-name {
@@ -773,61 +774,61 @@ body {
     text-align: center;
     font-weight: 500;
     color: var(--white);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Improve readability */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 /* Skills Section Responsive Fix */
 @media (max-width: 768px) {
     .tech-grid {
-        grid-template-columns: repeat(2, 1fr) !important; /* Force 2 columns on mobile */
-        gap: 12px; /* Reduce gap for smaller screens */
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
     }
     
     .tech-item {
-        padding: 12px 8px; /* Adjust padding for smaller items */
+        padding: 12px 8px;
     }
     
     .tech-icon {
-        font-size: 1.5rem; /* Slightly smaller icons */
+        font-size: 1.5rem;
         margin-bottom: 8px;
     }
     
     .tech-name {
-        font-size: 0.8rem; /* Smaller text */
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
     .tech-grid {
-        grid-template-columns: repeat(2, 1fr) !important; /* Keep 2 columns on very small screens */
-        gap: 10px; /* Even smaller gap */
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
     }
     
     .tech-item {
-        padding: 10px 5px; /* Compact padding */
+        padding: 10px 5px;
     }
     
     .tech-icon {
-        font-size: 1.3rem; /* Even smaller icons */
+        font-size: 1.3rem;
     }
     
     .tech-name {
-        font-size: 0.75rem; /* Smaller text */
+        font-size: 0.75rem;
     }
 }
 
 /* Additional improvement for the skills container */
 @media (max-width: 768px) {
     .skills-container {
-        padding: 20px 15px !important; /* Reduce padding on mobile */
+        padding: 20px 15px !important;
     }
     
     .skill-category {
-        margin-bottom: 20px; /* Reduce spacing between categories */
+        margin-bottom: 20px;
     }
     
     .skill-category h3 {
-        font-size: 1.2rem; /* Slightly smaller category titles */
+        font-size: 1.2rem;
         margin-bottom: 15px;
     }
 }
